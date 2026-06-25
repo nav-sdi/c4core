@@ -4,7 +4,7 @@ set -o pipefail
 
 # To run an image:
 #
-#   docker run -it --network host -v ~/proj/rapidyaml:/rapidyaml --name c4core_ubuntu22 ghcr.io/biojppm/c4core/ubuntu22.04:latest /bin/bash
+#   docker run -it --network host -v ~/proj/rapidyaml:/rapidyaml --name c4core_ubuntu22 ghcr.io/nav-sdi/c4core/ubuntu22.04:latest /bin/bash
 #
 # To resume a running image
 #
@@ -44,21 +44,21 @@ mydir=$(cd $(dirname $0) ; pwd)
 
 time ( \
   cd $mydir/ubuntu18.04 ; \
-  img=ghcr.io/biojppm/c4core/ubuntu18.04:latest ; \
+  img=ghcr.io/nav-sdi/c4core/ubuntu18.04:latest ; \
   time docker build -t $img . ; \
   time docker push $img \
   )
 
 time ( \
   cd $mydir/ubuntu22.04 ; \
-  img=ghcr.io/biojppm/c4core/ubuntu22.04:latest ; \
+  img=ghcr.io/nav-sdi/c4core/ubuntu22.04:latest ; \
   time docker build -t $img . ; \
   time docker push $img \
   )
 
 time ( \
   cd $mydir/ubuntu24.04 ; \
-  img=ghcr.io/biojppm/c4core/ubuntu24.04:latest ; \
+  img=ghcr.io/nav-sdi/c4core/ubuntu24.04:latest ; \
   time docker build -t $img . ; \
   time docker push $img \
   )

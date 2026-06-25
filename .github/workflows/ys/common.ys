@@ -55,7 +55,7 @@ defn setup-job(workflowname jobname)::
 #----------------------------------------------------------
 defn runs-on-docker-c4core(which)::
   runs-on: ubuntu-24.04
-  container:: "ghcr.io/biojppm/c4core/ubuntu$which:latest"
+  container:: "ghcr.io/nav-sdi/c4core/ubuntu$which:latest"
 
 
 #----------------------------------------------------------

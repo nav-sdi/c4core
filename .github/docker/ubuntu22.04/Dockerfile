@@ -13,7 +13,6 @@ RUN apt-get update \
  && apt-get install -y \
       apt-utils \
       ca-certificates \
-      lsb-core \
       gnupg \
       software-properties-common \
       wget \
@@ -67,12 +66,11 @@ RUN apt-get install -y \
 RUN apt-get install -y \
       python3 \
       python3-setuptools \
-      python3-pip \
- && pip3 install setuptools-rust \
- && pip3 install --upgrade pip \
- && pip3 install \
-      requests[security] \
-      pyopenssl \
+      python3-setuptools-rust \
+      python3-requests \
+      python3-openssl \
+      python3-pip
+RUN pip3 install --break-system-packages \
       ndg-httpsclient \
       pyasn1 \
       cpp-coveralls \
@@ -82,7 +80,7 @@ RUN apt-get install -y \
 RUN ( \
         cd /tmp ; \
         git clone --recursive https://github.com/biojppm/cmany -b dev ; \
-        pip install ./cmany \
+        pip install --break-system-packages ./cmany \
     ) \
  && echo "cmany done"
 

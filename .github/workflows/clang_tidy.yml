@@ -23,7 +23,7 @@ jobs:
     if: always()
     continue-on-error: false
     runs-on: ubuntu-24.04
-    container: ghcr.io/biojppm/c4core/ubuntu22.04:latest
+    container: ghcr.io/nav-sdi/c4core/ubuntu22.04:latest
     name: clang_tidy/c++${{matrix.std}}/${{matrix.bt}}
     strategy:
       fail-fast: false

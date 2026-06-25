@@ -24,7 +24,7 @@ jobs:
     continue-on-error: false
     name: canary/${{matrix.cxx}}/c++${{matrix.std}}/${{matrix.bt}}
     runs-on: ubuntu-24.04
-    container: ghcr.io/biojppm/c4core/ubuntu24.04:latest
+    container: ghcr.io/nav-sdi/c4core/ubuntu24.04:latest
     strategy:
       fail-fast: false
       matrix:
@@ -101,7 +101,7 @@ jobs:
     continue-on-error: false
     name: noexc/${{matrix.cxx}}/c++${{matrix.std}}/${{matrix.bt}}
     runs-on: ubuntu-24.04
-    container: ghcr.io/biojppm/c4core/ubuntu24.04:latest
+    container: ghcr.io/nav-sdi/c4core/ubuntu24.04:latest
     strategy:
       fail-fast: false
       matrix:
@@ -179,7 +179,7 @@ jobs:
     continue-on-error: false
     name: extended/${{matrix.cxx}}/c++${{matrix.std}}/vg${{matrix.vg}}
     runs-on: ubuntu-24.04
-    container: ghcr.io/biojppm/c4core/ubuntu${{matrix.img}}:latest
+    container: ghcr.io/nav-sdi/c4core/ubuntu${{matrix.img}}:latest
     strategy:
       fail-fast: false
       matrix:
@@ -553,7 +553,7 @@ jobs:
     continue-on-error: false
     name: ${{matrix.bt}}/c++${{matrix.std}}
     runs-on: ubuntu-24.04
-    container: ghcr.io/biojppm/c4core/ubuntu24.04:latest
+    container: ghcr.io/nav-sdi/c4core/ubuntu24.04:latest
     strategy:
       fail-fast: false
       matrix:

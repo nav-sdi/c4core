@@ -183,4 +183,3 @@ find_program(CLANG_TIDY clang-tidy)
 if(CLANG_TIDY)
     c4core_setup_clang_tidy(${CMAKE_CURRENT_LIST_DIR})
 endif()
-

@@ -86,7 +86,6 @@ set(C4CORE_SRC_FILES
 if(C4CORE_WITH_FASTFLOAT)
     list(APPEND C4CORE_SRC_FILES
         c4/ext/fast_float.hpp
-        c4/ext/fast_float_all.h
         )
 endif()
 set(C4CORE_AMALGAMATED ${C4CORE_SRC_DIR}/../src_singleheader/c4/c4core_all.hpp)

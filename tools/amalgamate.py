@@ -154,7 +154,7 @@ INSTRUCTIONS:
 
 def mkparser():
     parser = am.mkparser(fastfloat=(True, "enable fastfloat bundled library"),
-                         fastfloat_sys=(False, "use fastfloat from the system (pre-installed)")
+                         fastfloat_sys=(False, "use fastfloat from the system (pre-installed)"),
                          stl=(True, "enable stl interop"))
     parser.add_argument("--fastfloat_sys_dir",
                         default=None,
